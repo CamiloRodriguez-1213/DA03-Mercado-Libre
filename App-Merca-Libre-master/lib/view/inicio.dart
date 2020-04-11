@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:merca_libre/view/accion.dart';
 
 import 'accion.dart';
-import 'accion.dart';
+
 
 class Inicio extends StatelessWidget {
   final titulo = TextStyle(color: Colors.grey[800], fontSize: 22.0);
@@ -10,7 +10,9 @@ class Inicio extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
+      
         drawer: Drawer(
+          
             child: new ListView(
           children: <Widget>[
             
@@ -27,12 +29,12 @@ class Inicio extends StatelessWidget {
               ),
             ),
             ListTile(
-              title: Text('Inicio'),
-              leading: Icon(Icons.home),
+              title: Text('Mercado Pago'),
+              leading: Icon(Icons.attach_money),
             ),
             ListTile(
-              title: Text('Buscar'),
-              leading: Icon(Icons.search),
+              title: Text('Pagar con codigo QR'),
+              leading: Icon(Icons.add_a_photo),
             ),
             new Divider(
               color: Colors.black,
@@ -46,12 +48,22 @@ class Inicio extends StatelessWidget {
               title: Text('Buscar'),
               leading: Icon(Icons.search),
             ),
+            ListTile(
+              title: Text('Notificaciones'),
+              leading: Icon(Icons.notifications),
+            ),
+            ListTile(
+              title: Text('Mis compras'),
+              leading: Icon(Icons.add_shopping_cart),
+            ),
           ],
         )),
         backgroundColor: Colors.grey[200],
         appBar: AppBar(
           
+          
           title: Text('Producto',style: TextStyle(color: Colors.grey[800], fontSize: 19.0)),
+          
           backgroundColor: Colors.yellow[600],
           
           actions: <Widget>[
@@ -149,7 +161,7 @@ class Inicio extends StatelessWidget {
             ],
           ),
           Text("Disponible en 2 dias a partir de tu compra",
-              style: TextStyle(color: Colors.red)),
+              style: TextStyle(color: Colors.orange[700])),
           SizedBox(
             height: 15.0,
           ),
