@@ -60,7 +60,7 @@ class Inicio extends StatelessWidget {
         )),
         backgroundColor: Colors.grey[200],
         appBar: AppBar(
-          
+          elevation: 0, 
           
           title: Text('Producto',style: TextStyle(color: Colors.grey[800], fontSize: 19.0)),
           
