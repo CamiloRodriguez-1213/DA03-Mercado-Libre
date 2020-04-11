@@ -3,29 +3,28 @@ import 'package:merca_libre/view/accion.dart';
 
 import 'accion.dart';
 
-
 class Inicio extends StatelessWidget {
   final titulo = TextStyle(color: Colors.grey[800], fontSize: 22.0);
   final subtitulo = TextStyle(color: Colors.grey[600], fontSize: 15.0);
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-      
         drawer: Drawer(
-          
             child: new ListView(
           children: <Widget>[
-            
             Container(
-              
               child: UserAccountsDrawerHeader(
                 currentAccountPicture: CircleAvatar(
                     backgroundColor: Color.fromRGBO(255, 244, 200, 50)),
                 decoration: BoxDecoration(
                   color: Colors.yellow[600],
                 ),
-                accountName: Text('Hola Usuario', style: subtitulo,),
-                accountEmail: Text('Nivel avanzado', style: TextStyle(color: Colors.grey[800], fontSize: 18.0)),
+                accountName: Text(
+                  'Hola Usuario',
+                  style: subtitulo,
+                ),
+                accountEmail: Text('Nivel avanzado',
+                    style: TextStyle(color: Colors.grey[800], fontSize: 18.0)),
               ),
             ),
             ListTile(
@@ -60,35 +59,25 @@ class Inicio extends StatelessWidget {
         )),
         backgroundColor: Colors.grey[200],
         appBar: AppBar(
-          elevation: 0, 
-          
-          title: Text('Producto',style: TextStyle(color: Colors.grey[800], fontSize: 19.0)),
-          
+          elevation: 0,
+          title: Text('Producto',
+              style: TextStyle(color: Colors.grey[800], fontSize: 19.0)),
           backgroundColor: Colors.yellow[600],
-          
           actions: <Widget>[
-            
-            
             _crearAccion(Icons.favorite_border),
             _crearAccion(Icons.share),
             _crearAccion(Icons.search),
-            
           ],
-          
         ),
         body: SingleChildScrollView(
-            
             child: Container(
-              
           child: Column(
-            
             children: <Widget>[
               new Container(
-                decoration: BoxDecoration(
-                  color: Colors.yellow[600],
-                ),
-                child: Gps()
-                ),
+                  decoration: BoxDecoration(
+                    color: Colors.yellow[600],
+                  ),
+                  child: Gps()),
               _img(),
               _seccion1(),
               _seccion2(),
